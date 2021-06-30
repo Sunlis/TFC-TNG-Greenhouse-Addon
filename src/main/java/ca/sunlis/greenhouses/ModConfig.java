@@ -1,4 +1,4 @@
-package net.sharkbark.cellars;
+package ca.sunlis.greenhouses;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
@@ -36,9 +36,6 @@ public class ModConfig {
                         "\nSpecial Ice Traits: Makes using sea ice and packed ice effect temperature of the cellar." +
                         "\nMonth Average Temperature: This will cause the temperature calculation to be based on the average temperature of the month. Instead of actual current temperature" +
                         "\nTemperatureIceHouse: Is the minimum value the ice house can make it with out negative temperatures outside. Special Ice Traits do not take this into account.");
-
-
-
 
         isDebugging = config.get(Configuration.CATEGORY_GENERAL, "Debug", false).getBoolean(false);
         specialIceTraits = config.get(Configuration.CATEGORY_GENERAL, "SpecialIceTraits", false).getBoolean(false);

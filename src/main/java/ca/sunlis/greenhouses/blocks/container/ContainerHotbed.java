@@ -1,17 +1,17 @@
-package net.sharkbark.cellars.blocks.container;
+package ca.sunlis.greenhouses.blocks.container;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.sharkbark.cellars.blocks.tileentity.TEIceBunker;
+import ca.sunlis.greenhouses.blocks.tileentity.TEHotbed;
 
-public class ContainerIceBunker extends Container {
+public class ContainerHotbed extends Container {
     private final int numRows;
-    private final TEIceBunker chestInventory;
+    private final TEHotbed chestInventory;
 
-    public ContainerIceBunker(InventoryPlayer playerInv, TEIceBunker chestInventory, EntityPlayer player){
+    public ContainerHotbed(InventoryPlayer playerInv, TEHotbed chestInventory, EntityPlayer player){
         this.chestInventory = chestInventory;
         this.numRows = chestInventory.getSizeInventory() / 2;
         chestInventory.openInventory(player);
@@ -84,7 +84,7 @@ public class ContainerIceBunker extends Container {
         return itemstack;
     }
 
-    public TEIceBunker getChestInventory(){
+    public TEHotbed getChestInventory(){
         return this.chestInventory;
     }
 

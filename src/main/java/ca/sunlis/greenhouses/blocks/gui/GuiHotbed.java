@@ -1,4 +1,4 @@
-package net.sharkbark.cellars.blocks.gui;
+package ca.sunlis.greenhouses.blocks.gui;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
@@ -6,9 +6,9 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import net.sharkbark.cellars.blocks.container.ContainerIceBunker;
-import net.sharkbark.cellars.blocks.tileentity.TEIceBunker;
-import net.sharkbark.cellars.util.Reference;
+import ca.sunlis.greenhouses.blocks.container.ContainerIceBunker;
+import ca.sunlis.greenhouses.blocks.tileentity.TEHotbed;
+import ca.sunlis.greenhouses.util.Reference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +17,9 @@ public class GuiIceBunker extends GuiContainer {
 
     private static final ResourceLocation GUI_BUNKER = new ResourceLocation(Reference.MOD_ID + ":textures/gui/ice_bunker.png");
     private final InventoryPlayer playerInventory;
-    private final TEIceBunker te;
+    private final TEHotbed te;
 
-    public GuiIceBunker(InventoryPlayer playerInventory, TEIceBunker chestInventory, EntityPlayer player){
+    public GuiIceBunker(InventoryPlayer playerInventory, TEHotbed chestInventory, EntityPlayer player){
         super(new ContainerIceBunker(playerInventory, chestInventory, player));
         this.playerInventory = playerInventory;
         this.te = chestInventory;
